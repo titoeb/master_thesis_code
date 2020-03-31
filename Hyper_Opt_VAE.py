@@ -159,7 +159,7 @@ def my_app(cfg):
     train_mat_count.sort_indices()
 
     # Setup HyperOpt
-    space = space = {
+    space = {
         # General Hyper paramters
         'k': hp.hp.uniform('k', 0, 300),
         'beta': hp.hp.uniform('beta', 0, 1),

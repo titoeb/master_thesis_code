@@ -111,7 +111,7 @@ def my_app(cfg):
     train_mat.sort_indices()
 
     # Setup HyperOpt
-    space = space = {'alpha': hp.hp.lognormal('alpha',0, 1),
+    space = {'alpha': hp.hp.lognormal('alpha',0, 1),
         'l1_ratio' : hp.hp.lognormal('l1_ratio', 0, 1),
          'max_iter': hp.hp.choice('max_iter', np.arange(1, 40)),
          'tol': hp.hp.lognormal('tol', -3, 1.0)}

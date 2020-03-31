@@ -137,7 +137,7 @@ def my_app(cfg):
     train_mat_count.sort_indices()
 
     # Setup HyperOpt
-    space = space = {
+    space = {
         'similarity_function': hp.hp.choice('similarity_function', [
             {'type': 'jaccard', 'neighborhood_size': hp.hp.lognormal('nb_size_jaccard', 0, 1), 'matrix': hp.hp.choice('matrix_jaccard', ['count', 'binary'])},
             {'type': 'cosine', 'neighborhood_size': hp.hp.lognormal('nb_size_cosine', 0, 1), 'matrix': hp.hp.choice('matrix_cosine', ['count', 'binary'])},

@@ -129,7 +129,7 @@ def my_app(cfg):
     train_mat_count.sort_indices()
 
     # Setup HyperOpt
-    space = space = {'alpha': hp.hp.lognormal('alpha',0, 1), 'mat': hp.hp.choice('mat', ['count', 'bin'])}
+    space = {'alpha': hp.hp.lognormal('alpha',0, 1), 'mat': hp.hp.choice('mat', ['count', 'bin'])}
 
     # Set up MLFlow experiment
     experiment_name = f"HyperOpt_Ease_{datetime.datetime.now().strftime('%Y-%m-%d %H:%M').replace(' ', '_')}"
